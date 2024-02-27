@@ -20,12 +20,15 @@ const Header = props => {
             alt="website logo"
           />
           <Link to="/login" className="header-link">
-            <button type="button" className="nav-mobile-btn">
+            <button
+              type="button"
+              className="nav-mobile-btn"
+              onClick={removeCookie}
+            >
               <img
                 src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-log-out-img.png"
                 alt="nav logout"
                 className="nav-bar-img"
-                onClick={removeCookie}
               />
             </button>
           </Link>
