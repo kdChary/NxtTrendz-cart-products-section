@@ -1,1 +1,17 @@
-/* Write your CSS code here */
+.products-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+.products-image {
+  width: 220px;
+}
+
+@media (min-width: 768px) {
+  .products-image {
+    width: 375px;
+  }
+}
