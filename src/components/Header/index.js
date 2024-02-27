@@ -1,3 +1,5 @@
+import {Link} from 'react-router-dom'
+
 import './index.css'
 
 const Header = () => (
@@ -9,14 +11,15 @@ const Header = () => (
           src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-logo-img.png"
           alt="website logo"
         />
-
-        <button type="button" className="nav-mobile-btn">
-          <img
-            src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-log-out-img.png"
-            alt="nav logout"
-            className="nav-bar-img"
-          />
-        </button>
+        <Link to="/login" className="header-link">
+          <button type="button" className="nav-mobile-btn">
+            <img
+              src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-log-out-img.png"
+              alt="nav logout"
+              className="nav-bar-img"
+            />
+          </button>
+        </Link>
       </div>
 
       <div className="nav-content nav-bar-large-container">
@@ -26,15 +29,23 @@ const Header = () => (
           alt="website logo"
         />
         <ul className="nav-menu">
-          <li className="nav-menu-item">Home</li>
+          <Link to="/" className="header-link">
+            <li className="nav-menu-item">Home</li>
+          </Link>
 
-          <li className="nav-menu-item">Products</li>
+          <Link to="/products" className="header-link">
+            <li className="nav-menu-item">Products</li>
+          </Link>
 
-          <li className="nav-menu-item">Cart</li>
+          <Link to="/cart" className="header-link">
+            <li className="nav-menu-item">Cart</li>
+          </Link>
         </ul>
-        <button type="button" className="logout-desktop-btn">
-          Logout
-        </button>
+        <Link to="/login" className="header-link">
+          <button type="button" className="logout-desktop-btn">
+            Logout
+          </button>
+        </Link>
       </div>
     </div>
     <div className="nav-menu-mobile">
